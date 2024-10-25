@@ -1,13 +1,16 @@
 import sys
 from pathlib import Path
-computeLocation = "Windows"  # Edit this based on where the QSM is being run. Should be "Windows" for most users.
-QSMParentFolder = Path(r"C:\Users\jhoward\Desktop")
+computeLocation = "macOS"  # Edit this based on where the QSM is being run. Should be "Windows" for most users.
+QSMParentFolder = Path(r"/Users/adele/Documents/QSMParentFolder")
 sys.path.append(str(QSMParentFolder))
 
+import src.qubitSimulationModule as QSM
+import QSM
+#from qsm import *
 import QSM.src.qubitSimulationModule as QSM_init
-from QSM.src.simulations import *
-from QSM.src.calculations import *
-projectFolder = Path(__file__).parent.absolute()
+#from qsm.src.simulations import *
+#from qsm.src.calculations import *
+projectFolder = Path("/Users/adele/Documents/qsmParentFolder/Ad-superconduct-code/8Q/example.py").parent.absolute()
 import subprocess
 
 QSMFolder = QSMParentFolder / 'QSM'
